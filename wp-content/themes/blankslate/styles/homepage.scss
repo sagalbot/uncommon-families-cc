@@ -1,0 +1,182 @@
+#homepage {
+    .section-1 {
+        width: 100%;
+        height: 750px;
+        position: relative;
+        margin-top: -92px;
+        background-size: cover;
+        overflow: hidden;
+        &.animate {
+            .overlay {
+                opacity: 1;
+            }
+            h1 {
+                @include enterFromLeft(2s, 0s);
+            }
+            h2 {
+                @include enterFromLeft(1.8s, 0.2s);
+            }
+        }
+        .overlay {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s;
+            background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 75%);
+            .container {
+                padding: 92px 0;
+                h1 {
+                    font-size: 100px;
+                    font-family: 'Knockout FullLiteweight';
+                    color: white;
+                    width: 520px;
+                }
+                h2 {
+                    font-size: 20px;
+                    font-family: 'Knockout Liteweight';
+                    color: $site_yellow;
+                    margin: 100px 0 10px 0;
+                }
+                @include cta;
+            }
+        }
+    }
+    .section-2 {
+        margin-top: 100px;
+        margin-bottom: 300px;
+        overflow: hidden;
+        &.animate {
+            .overlay {
+                opacity: 1 !important;
+            }
+            .hour {
+                @include enterFromTop(1.5s, 0s);
+            }
+            .midday {
+                @include enterFromRight(1.4s, 0.2s);
+            }
+            .title {
+                @include enterFromRight(1.5s, 0.3s);
+            }
+            .subtitle {
+                @include enterFromRight(1.5s, 0.5s);
+            }
+            .description {
+                @include enterFromRight(1.4s, 0.6s);
+            }
+            .cta {
+                @include enterFromBottom(1.4s, 0.7s);
+            }
+        }
+        .container {
+            .slides {
+                .slide {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 580px;
+                    .overlay {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        transition: opacity 1s;
+                        background: linear-gradient(to left, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 75%);
+                        .content {
+                            width: 40%;
+                            margin-left: 60%;
+                            padding-top: 60px;
+                            display: flex;
+                            @include cta;
+                            .left-content {
+                                .hour {
+                                    font-family: 'Knockout FullLiteweight';
+                                    font-size: 280px;
+                                    color: white;
+                                    letter-spacing: 0;
+                                }
+                            }
+                            .right-content {
+                                margin: 130px 0 0 20px;
+                                .midday {
+                                    font-family: 'Knockout FullLiteweight';
+                                    font-size: 20px;
+                                    color: white;
+                                    letter-spacing: 1px;
+                                }
+                                .title {
+                                    font-family: 'Knockout FullLiteweight';
+                                    font-size: 20px;
+                                    color: $site_yellow;
+                                    letter-spacing: 1px;
+                                    margin-bottom: 30px;
+                                }
+                                .subtitle {
+                                    font-family: 'Knockout FullLiteweight';
+                                    font-size: 30px;
+                                    color: white;
+                                    letter-spacing: 0.5px;
+                                    line-height: 30px;
+                                    margin-bottom: 10px;
+
+                                }
+                                .description {
+                                    width: 250px;
+                                    font-family: 'ITC Franklin Gothic MdCd';
+                                    font-size: 20px;
+                                    color: white;
+                                    letter-spacing: 0.25px;
+                                    line-height: 26px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .controls {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                .slide-control {
+                    width: 24.8%;
+                    border-top: 3px solid $menu_gray;
+                    cursor: pointer;
+                    &:hover {
+                        border-color: $dark_gray;
+                        p {
+                            color: $dark_gray;
+                            margin-top: 10px;
+                        }
+                        .loader {
+                            width: 50%;
+                        }
+                    }
+                    &.active {
+                        border-color: $dark_gray;
+                        p {
+                            color: $dark_gray;
+                            margin-top: 10px;
+                        }
+                        .loader {
+                            width: 50%;
+                        }
+                    }
+                    .loader {
+                        display: block;
+                        height: 3px;
+                        background-color: $dark_gray;
+                        width: 0%;
+                        transition: width 1s;
+                    }
+                    p {
+                        font-family: 'Knockout Liteweight';
+                        font-size: 20px;
+                        color: $menu_gray;
+                        letter-spacing: 1px;
+                        margin-top: 15px;
+                        transition: margin-top 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+

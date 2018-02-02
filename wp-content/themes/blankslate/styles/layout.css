@@ -1,0 +1,615 @@
+/*Mixings*/
+/*Enter from left*/
+@import url(./fonts/fonts.css);
+@keyframes enterFromLeft {
+  0% {
+    position: relative;
+    left: -200%;
+    opacity: 0;
+  }
+  70% {
+    position: relative;
+    left: 1%;
+    opacity: 0.7;
+  }
+  100% {
+    position: relative;
+    left: 0%;
+    opacity: 1;
+  }
+}
+/*Enter from right*/
+@keyframes enterFromRight {
+  0% {
+    position: relative;
+    right: -200%;
+    opacity: 0;
+  }
+  70% {
+    position: relative;
+    right: 1%;
+    opacity: 0.7;
+  }
+  100% {
+    position: relative;
+    right: 0%;
+    opacity: 1;
+  }
+}
+/*Enter from top*/
+@keyframes enterFromTop {
+  0% {
+    position: relative;
+    top: -200%;
+    opacity: 0;
+  }
+  70% {
+    position: relative;
+    top: 1%;
+    opacity: 0.3;
+  }
+  100% {
+    position: relative;
+    top: 0%;
+    opacity: 1;
+  }
+}
+/*Enter from bottom*/
+@keyframes enterFromBottom {
+  0% {
+    position: relative;
+    bottom: -100%;
+    opacity: 0;
+  }
+  70% {
+    position: relative;
+    bottom: 1%;
+    opacity: 0.3;
+  }
+  100% {
+    position: relative;
+    bottom: 0%;
+    opacity: 1;
+  }
+}
+/*CTA*/
+@keyframes ctaAnimation_box {
+  0% {
+    top: 0;
+  }
+  70% {
+    top: 100px;
+  }
+  100% {
+    top: 89px;
+  }
+}
+header {
+  position: relative;
+  z-index: 5;
+}
+header .header-main-menu {
+  background-color: white;
+}
+header .header-main-menu .container .logo-box {
+  background-color: #333743;
+  display: inline-block;
+  padding: 12px 35px 18px 35px;
+  position: absolute;
+}
+header .header-main-menu .container .logo-box .logo {
+  width: 130px;
+  height: 60px;
+}
+header .header-main-menu .container .main-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+header .header-main-menu .container .main-menu .menu-main-menu-container #menu-main-menu li {
+  display: inline-block;
+}
+header .header-main-menu .container .main-menu .menu-main-menu-container #menu-main-menu li a {
+  font-family: 'Knockout Liteweight';
+  color: #919191;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 24px;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  transition: color 0.3s , top 0.3s, padding 0.5s;
+}
+header .header-main-menu .container .main-menu .menu-main-menu-container #menu-main-menu li a:hover {
+  color: #FFDD00;
+  top: -2px;
+}
+header .header-main-menu .container .main-menu .search {
+  background-image: url("./images/search.svg");
+  width: 16px;
+  height: 16px;
+  padding: 25px 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  transition: padding 0.5s;
+}
+header .header-secondary-menu {
+  background: rgba(51, 55, 67, 0.5);
+}
+header .header-secondary-menu .container .menu-secondary-menu-container #menu-secondary-menu {
+  display: flex;
+  flex-direction: row-reverse;
+}
+header .header-secondary-menu .container .menu-secondary-menu-container #menu-secondary-menu li:before {
+  content: "|";
+  color: white;
+}
+header .header-secondary-menu .container .menu-secondary-menu-container #menu-secondary-menu li:last-child:before {
+  content: "";
+  color: white;
+}
+header .header-secondary-menu .container .menu-secondary-menu-container #menu-secondary-menu li a {
+  display: inline-block;
+  font-family: 'ITC Franklin Gothic Book';
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  padding: 6px 15px 3px 15px;
+  transition: color 0.3s;
+}
+header .header-secondary-menu .container .menu-secondary-menu-container #menu-secondary-menu li a:hover {
+  color: #FFDD00;
+}
+header.stuck {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+header.stuck #menu-main-menu a {
+  padding: 8px 24px 8px 24px !important;
+}
+header.stuck .search {
+  padding: 8px 0px !important;
+}
+
+#homepage .section-1 {
+  width: 100%;
+  height: 750px;
+  position: relative;
+  margin-top: -92px;
+  background-size: cover;
+  overflow: hidden;
+}
+#homepage .section-1.animate .overlay {
+  opacity: 1;
+}
+#homepage .section-1.animate h1 {
+  position: relative;
+  left: -200%;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-name: enterFromLeft;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-1.animate h2 {
+  position: relative;
+  left: -200%;
+  animation-duration: 1.8s;
+  animation-iteration-count: 1;
+  animation-name: enterFromLeft;
+  animation-direction: normal;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-1 .overlay {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 75%);
+}
+#homepage .section-1 .overlay .container {
+  padding: 92px 0;
+}
+#homepage .section-1 .overlay .container h1 {
+  font-size: 100px;
+  font-family: 'Knockout FullLiteweight';
+  color: white;
+  width: 520px;
+}
+#homepage .section-1 .overlay .container h2 {
+  font-size: 20px;
+  font-family: 'Knockout Liteweight';
+  color: #FFDD00;
+  margin: 100px 0 10px 0;
+}
+#homepage .section-1 .overlay .container .cta {
+  margin: 50px 0;
+}
+#homepage .section-1 .overlay .container .cta.stuck {
+  position: fixed;
+  top: 89px;
+  z-index: 10;
+  margin: 0;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-name: ctaAnimation_box;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-1 .overlay .container .cta.stuck:hover .cta-left span {
+  color: #919191;
+}
+#homepage .section-1 .overlay .container .cta.stuck .cta-left {
+  background-color: #FFDD00;
+  border-color: #333743;
+}
+#homepage .section-1 .overlay .container .cta.stuck .cta-left span {
+  width: 136px;
+  color: #333743;
+}
+#homepage .section-1 .overlay .container .cta.stuck .cta-mid {
+  background-color: #FFDD00;
+  border-color: #333743;
+}
+#homepage .section-1 .overlay .container .cta.stuck .cta-mid .cta-up {
+  border-color: #333743;
+}
+#homepage .section-1 .overlay .container .cta.stuck .cta-mid .cta-down {
+  border-color: #333743;
+}
+#homepage .section-1 .overlay .container .cta.stuck .cta-right {
+  background-color: #FFDD00;
+  border-color: #333743;
+}
+#homepage .section-1 .overlay .container .cta a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+#homepage .section-1 .overlay .container .cta a:hover .cta-left span {
+  color: #FFDD00;
+}
+#homepage .section-1 .overlay .container .cta a:hover .cta-mid .arrow {
+  left: -24px;
+}
+#homepage .section-1 .overlay .container .cta a .cta-left {
+  border-left: 2px solid #FFDD00;
+  border-top: 2px solid #FFDD00;
+  border-bottom: 2px solid #FFDD00;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+#homepage .section-1 .overlay .container .cta a .cta-left span {
+  display: block;
+  font-family: 'Knockout Liteweight';
+  font-size: 24px;
+  letter-spacing: 1px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  transition: color 0.3s, width 0.1s linear;
+}
+#homepage .section-1 .overlay .container .cta a .cta-mid {
+  border-top: 1px solid #FFDD00;
+  border-bottom: 1px solid #FFDD00;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+#homepage .section-1 .overlay .container .cta a .cta-mid .arrow {
+  position: absolute;
+  display: block;
+  background-image: url(./images/arrow.svg);
+  width: 52px;
+  height: 17px;
+  z-index: 5;
+  top: 14px;
+  left: -28px;
+  transition: left 0.3s;
+}
+#homepage .section-1 .overlay .container .cta a .cta-mid .cta-up {
+  border: 1px solid #FFDD00;
+  height: 20%;
+  position: absolute;
+  top: 0;
+  left: -1px;
+}
+#homepage .section-1 .overlay .container .cta a .cta-mid .cta-down {
+  border: 1px solid #FFDD00;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+}
+#homepage .section-1 .overlay .container .cta a .cta-right {
+  width: 40px;
+  border-right: 2px solid #FFDD00;
+  border-top: 2px solid #FFDD00;
+  border-bottom: 2px solid #FFDD00;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+#homepage .section-2 {
+  margin-top: 100px;
+  margin-bottom: 300px;
+  overflow: hidden;
+}
+#homepage .section-2.animate .overlay {
+  opacity: 1 !important;
+}
+#homepage .section-2.animate .hour {
+  position: relative;
+  top: -200%;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-name: enterFromTop;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-2.animate .midday {
+  position: relative;
+  right: -200%;
+  animation-duration: 1.4s;
+  animation-iteration-count: 1;
+  animation-name: enterFromRight;
+  animation-direction: normal;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-2.animate .title {
+  position: relative;
+  right: -200%;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-name: enterFromRight;
+  animation-direction: normal;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-2.animate .subtitle {
+  position: relative;
+  right: -200%;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-name: enterFromRight;
+  animation-direction: normal;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-2.animate .description {
+  position: relative;
+  right: -200%;
+  animation-duration: 1.4s;
+  animation-iteration-count: 1;
+  animation-name: enterFromRight;
+  animation-direction: normal;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-2.animate .cta {
+  position: relative;
+  bottom: -100%;
+  animation-duration: 1.4s;
+  animation-iteration-count: 1;
+  animation-name: enterFromBottom;
+  animation-direction: normal;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-2 .container .slides .slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 580px;
+}
+#homepage .section-2 .container .slides .slide .overlay {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5) 0%, transparent 75%);
+}
+#homepage .section-2 .container .slides .slide .overlay .content {
+  width: 40%;
+  margin-left: 60%;
+  padding-top: 60px;
+  display: flex;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta {
+  margin: 50px 0;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta.stuck {
+  position: fixed;
+  top: 89px;
+  z-index: 10;
+  margin: 0;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-name: ctaAnimation_box;
+  animation-direction: normal;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta.stuck:hover .cta-left span {
+  color: #919191;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta.stuck .cta-left {
+  background-color: #FFDD00;
+  border-color: #333743;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta.stuck .cta-left span {
+  width: 136px;
+  color: #333743;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta.stuck .cta-mid {
+  background-color: #FFDD00;
+  border-color: #333743;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta.stuck .cta-mid .cta-up {
+  border-color: #333743;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta.stuck .cta-mid .cta-down {
+  border-color: #333743;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta.stuck .cta-right {
+  background-color: #FFDD00;
+  border-color: #333743;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a:hover .cta-left span {
+  color: #FFDD00;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a:hover .cta-mid .arrow {
+  left: -24px;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a .cta-left {
+  border-left: 2px solid #FFDD00;
+  border-top: 2px solid #FFDD00;
+  border-bottom: 2px solid #FFDD00;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a .cta-left span {
+  display: block;
+  font-family: 'Knockout Liteweight';
+  font-size: 24px;
+  letter-spacing: 1px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  transition: color 0.3s, width 0.1s linear;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a .cta-mid {
+  border-top: 1px solid #FFDD00;
+  border-bottom: 1px solid #FFDD00;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a .cta-mid .arrow {
+  position: absolute;
+  display: block;
+  background-image: url(./images/arrow.svg);
+  width: 52px;
+  height: 17px;
+  z-index: 5;
+  top: 14px;
+  left: -28px;
+  transition: left 0.3s;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a .cta-mid .cta-up {
+  border: 1px solid #FFDD00;
+  height: 20%;
+  position: absolute;
+  top: 0;
+  left: -1px;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a .cta-mid .cta-down {
+  border: 1px solid #FFDD00;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .cta a .cta-right {
+  width: 40px;
+  border-right: 2px solid #FFDD00;
+  border-top: 2px solid #FFDD00;
+  border-bottom: 2px solid #FFDD00;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .left-content .hour {
+  font-family: 'Knockout FullLiteweight';
+  font-size: 280px;
+  color: white;
+  letter-spacing: 0;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .right-content {
+  margin: 130px 0 0 20px;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .right-content .midday {
+  font-family: 'Knockout FullLiteweight';
+  font-size: 20px;
+  color: white;
+  letter-spacing: 1px;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .right-content .title {
+  font-family: 'Knockout FullLiteweight';
+  font-size: 20px;
+  color: #FFDD00;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .right-content .subtitle {
+  font-family: 'Knockout FullLiteweight';
+  font-size: 30px;
+  color: white;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+#homepage .section-2 .container .slides .slide .overlay .content .right-content .description {
+  width: 250px;
+  font-family: 'ITC Franklin Gothic MdCd';
+  font-size: 20px;
+  color: white;
+  letter-spacing: 0.25px;
+  line-height: 26px;
+}
+#homepage .section-2 .container .controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+#homepage .section-2 .container .controls .slide-control {
+  width: 24.8%;
+  border-top: 3px solid #919191;
+  cursor: pointer;
+}
+#homepage .section-2 .container .controls .slide-control:hover {
+  border-color: #333743;
+}
+#homepage .section-2 .container .controls .slide-control:hover p {
+  color: #333743;
+  margin-top: 10px;
+}
+#homepage .section-2 .container .controls .slide-control:hover .loader {
+  width: 50%;
+}
+#homepage .section-2 .container .controls .slide-control.active {
+  border-color: #333743;
+}
+#homepage .section-2 .container .controls .slide-control.active p {
+  color: #333743;
+  margin-top: 10px;
+}
+#homepage .section-2 .container .controls .slide-control.active .loader {
+  width: 50%;
+}
+#homepage .section-2 .container .controls .slide-control .loader {
+  display: block;
+  height: 3px;
+  background-color: #333743;
+  width: 0%;
+  transition: width 1s;
+}
+#homepage .section-2 .container .controls .slide-control p {
+  font-family: 'Knockout Liteweight';
+  font-size: 20px;
+  color: #919191;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  transition: margin-top 0.5s;
+}
+
+.container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=layout.css.map */

@@ -1,0 +1,101 @@
+header {
+    position: relative;
+    z-index: $index_low;
+    .header-main-menu {
+        background-color: white;
+        .container {
+            .logo-box {
+                background-color: $dark_gray;
+                display: inline-block;
+                padding: 12px 35px 18px 35px;
+                position: absolute;
+                .logo {
+                    width: 130px;
+                    height: 60px;
+                }
+            }
+            .main-menu {
+                display: flex;
+                justify-content: flex-end;
+                .menu-main-menu-container {
+                    #menu-main-menu li {
+                        display: inline-block;
+                        a {
+                            font-family: 'Knockout Liteweight';
+                            color: $menu_gray;
+                            font-size: 20px;
+                            text-decoration: none;
+                            padding: 24px;
+                            display: inline-block;
+                            position: relative;
+                            top: 0;
+                            transition: color 0.3s , top 0.3s, padding 0.5s;
+                            &:hover {
+                                color: $site_yellow;
+                                top: -2px;
+                            }
+                        }
+                    }
+                }
+                .search {
+                    background-image: url('./images/search.svg');
+                    width: 16px;
+                    height: 16px;
+                    padding: 25px 0px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    cursor: pointer;
+                    transition: padding 0.5s;
+                }
+            }
+        }
+    }
+    .header-secondary-menu {
+        background: rgba(51, 55, 67, 0.5);
+        .container {
+            .menu-secondary-menu-container {
+                #menu-secondary-menu {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    li {
+                        &:before {
+                            content: "|";
+                            color: white;
+                        }
+                        &:last-child {
+                            &:before {
+                                content: "";
+                                color: white;
+                            }
+                        }
+                        a {
+                            display: inline-block;
+                            font-family: 'ITC Franklin Gothic Book';
+                            font-size: 14px;
+                            color: white;
+                            text-decoration: none;
+                            padding: 6px 15px 3px 15px;
+                            transition: color 0.3s;
+                            &:hover {
+                                color: $site_yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.stuck {
+        position: fixed;
+        width: 100%;
+        z-index: $index_mid;
+        #menu-main-menu {
+            a {
+                padding: 8px 24px 8px 24px !important;
+            }
+        }
+        .search {
+            padding: 8px 0px !important;
+        }
+    }
+}

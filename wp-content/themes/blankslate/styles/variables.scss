@@ -1,0 +1,118 @@
+$menu_gray: #919191;
+$light_gray: #919191;
+$dark_gray: #333743;
+$site_yellow: #FFDD00;
+
+$index_base: 0;
+$index_low: 0 + 5;
+$index_mid: 0 + 10;
+$index_hight: 0 + 50;
+
+/*Mixings*/
+@mixin cta {
+    .cta {
+        margin: 50px 0;
+        &.stuck {
+            position: fixed;
+            top: 89px;
+            z-index: $index_mid;
+            margin: 0;
+            @include ctaAnimation_box(0.5s, 0s);
+            &:hover {
+                .cta-left span {
+                    color: $menu_gray;
+                }
+            }
+            .cta-left {
+                background-color: $site_yellow;
+                border-color: $dark_gray;
+                span {
+                    width: 136px;
+                    color: $dark_gray;
+                }
+            }
+            .cta-mid {
+                background-color: $site_yellow;
+                border-color: $dark_gray;
+                .cta-up {
+                    border-color: $dark_gray;
+                }
+                .cta-down {
+                    border-color: $dark_gray;
+                }
+            }
+            .cta-right {
+                background-color: $site_yellow;
+                border-color: $dark_gray;
+            }
+        }
+        a {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            &:hover {
+                .cta-left span {
+                    color: $site_yellow;
+                }
+                .cta-mid .arrow {
+                    left: -24px;
+                }
+            }
+            .cta-left {
+                border-left: 2px solid $site_yellow;
+                border-top: 2px solid $site_yellow;
+                border-bottom: 2px solid $site_yellow;
+                transition: background-color 0.3s, border-color 0.3s;
+                span {
+                    display: block;
+                    font-family: 'Knockout Liteweight';
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    padding: 10px;
+                    width: 150px;
+                    text-align: center;
+                    transition: color 0.3s, width 0.1s linear;
+                }
+            }
+            .cta-mid {
+                border-top: 1px solid $site_yellow;
+                border-bottom: 1px solid $site_yellow;
+                position: relative;
+                transition: background-color 0.3s, border-color 0.3s;
+                .arrow {
+                    position: absolute;
+                    display: block;
+                    background-image: url(./images/arrow.svg);
+                    width: 52px;
+                    height: 17px;
+                    z-index: $index_low;
+                    top: 14px;
+                    left: -28px;
+                    transition: left 0.3s;
+                }
+                .cta-up {
+                    border: 1px solid $site_yellow;
+                    height: 20%;
+                    position: absolute;
+                    top: 0;
+                    left: -1px;
+                }
+                .cta-down {
+                    border: 1px solid $site_yellow;
+                    height: 20%;
+                    position: absolute;
+                    bottom: 0;
+                    left: -1px;
+                }
+            }
+            .cta-right {
+                width: 40px;
+                border-right: 2px solid $site_yellow;
+                border-top: 2px solid $site_yellow;
+                border-bottom: 2px solid $site_yellow;
+                transition: background-color 0.3s, border-color 0.3s;
+            }
+        }
+    }
+}
